@@ -1,0 +1,159 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Formation.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="bootstrap_Quartz.css" rel="stylesheet" />
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style type="text/css">
+        .auto-style2 {
+            width: 1075px;
+            height: 542px;
+        }
+        .auto-style6 {
+            border: 3px black solid;
+            width: 275px;
+            height: 488px;
+        }
+        .auto-style7 {
+            border: 3px black solid;
+            width: 218px;
+            height: 488px;
+            margin-left: 600px;
+        }
+        .auto-style8 {
+            height: 93px;
+        }
+        .auto-style9 {
+            margin-left: 83px;
+            margin-top: 0px;
+        }
+        .auto-style10 {
+            height: 72px;
+        }
+        .body {
+            width: 100%;
+        }
+    </style>
+</head>
+<body style="height: 717px; margin-right: 0; width: 1271px;">
+    <form id="form1" runat="server">
+
+        <table style="border:3px black solid" class="auto-style2">
+            <tr>
+                <td class="auto-style10" colspan="2">
+                     <%--///////// --%>
+                   
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+      <%-- nav for rh--%>
+  <div class="container-fluid" id="NAVRH" runat="server" visible="false">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav me-auto">
+       
+        <li class="nav-item">
+          <a class="nav-link" href="Demande.aspx">Demande</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ÉditerFormation.aspx">Éditer Formation</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="supprimerFormation.aspx">supprimer Formation</a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link" href="/Login.aspx">Se déconnecter</a>
+        </li>
+     
+      </ul>
+   
+    </div>
+      
+  </div>
+
+      <%--  --%>
+
+      <%--nav for slarie--%>
+
+       <div class="container-fluid" id="NAVsalarie" runat="server" visible="false">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="formation.aspx">Liste formation
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Mesformation.aspx">Mesformation</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="Mesdemandes.aspx">Mesdemandes</a>
+        </li>
+           <li class="nav-item">
+          <a class="nav-link" href="/Login.aspx">Se déconnecter</a>
+        </li>
+      </ul>
+   
+    </div>
+      
+  </div>
+     
+       
+     
+</nav>
+                     <%--////////// --%>
+                </td>
+
+
+
+            </tr>
+            <tr>
+                <td class="auto-style7">   
+                    <div class="toast-body">
+                         &nbsp; <asp:Label ID="nom"  runat="server" Text="ID : 01" Font-Bold="True" ForeColor="#FF0066" Font-Italic="False" Font-Size="Medium" CssClass=" align-content-lg-start"></asp:Label>
+                    
+                    </div>
+                    <div class="toast-body">
+                         &nbsp;&nbsp; <asp:Label ID="Prenom"  runat="server" Text="Prenom" Font-Bold="True" ForeColor="#FF0066" Font-Italic="False" Font-Overline="False" Font-Size="Medium"></asp:Label>
+                    <br />
+                    </div>
+                  
+                  
+                    
+                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" EnableViewState="False" />
+                    <asp:TreeView ID="TreeView1" runat="server" Height="321px" ShowLines="True" Width="202px" class="breadcrumb"  CssClass="auto-style9" DataSourceID="SiteMapDataSource1" LineImagesFolder="~/TreeLineImages">
+                    </asp:TreeView>
+                    <asp:SiteMapDataSource ID="SiteMapDataSource2" SiteMapProvider="SiteMapDataSource2" runat="server" />
+                </td>
+                <td class="auto-style6">     
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
+                       
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style8" colspan="2">
+
+                    <div class="alert alert-dismissible alert-warning" style="left: 7px; top: 4px; width: 1045px; height: 68px">
+                      
+                      <h4 class="alert-heading">2021 &copy</h4>
+                      <p class="mb-0"> <a href="#" class="alert-link"> </a>.</p>
+                    </div>
+                </td>
+            </tr>
+            </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,14 @@
+﻿.dropdown1 {
+    background: url(http://maxgxl.com/max4u/images/selectArrowDown.png) no-repeat 95% center;
+    width: 150px;
+    border: 1px solid #000;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+    .dropdown1 select {
+        border: 0px;
+        width: 168px;
+        background: none;
+        
+    }
